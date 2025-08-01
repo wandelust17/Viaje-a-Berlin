@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Itinerario Interactivo: Berlín y Praga</title>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 20px;
+            background-color: #f4f7f6;
+            color: #333;
+        }
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            background: #fff;
+            padding: 25px;
+            border-radius: 10px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        }
+        header {
+            text-align: center;
+            border-bottom: 2px solid #e0e0e0;
+            padding-bottom: 20px;
+            margin-bottom: 20px;
+        }
+        header h1 {
+            color: #003366;
+            margin: 0;
+        }
+        header p {
+            margin: 5px 0 0;
+            color: #555;
+            font-size: 1.1em;
+        }
+        .accordion-button {
+            background-color: #005A9C;
+            color: white;
+            cursor: pointer;
+            padding: 18px;
+            width: 100%;
+            border: none;
+            text-align: left;
+            outline: none;
+            font-size: 1.1em;
+            font-weight: bold;
+            transition: background-color 0.3s ease;
+            margin-top: 10px;
+            border-radius: 5px;
+        }
+        .accordion-button:hover, .accordion-button.active {
+            background-color: #003366;
+        }
+        .accordion-button .day-number {
+            display: inline-block;
+            background: rgba(255,255,255,0.2);
+            padding: 4px 10px;
+            border-radius: 5px;
+            margin-right: 15px;
+        }
+        .panel {
+            padding: 0 18px;
+            background-color: white;
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease-out;
+            border: 1px solid #ddd;
+            border-top: none;
+            border-radius: 0 0 5px 5px;
+        }
+        .panel ul {
+            list-style: none;
+            padding: 0;
+            margin: 15px 0;
+        }
+        .panel li {
+            padding: 12px 0;
+            border-bottom: 1px dashed #eee;
+        }
+        .panel li:last-child {
+            border-bottom: none;
+        }
+        .panel a {
+            color: #005A9C;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        .panel a:hover {
+            text-decoration: underline;
+        }
+        .icon {
+            margin-right: 8px;
+        }
+        .summary-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+        .summary-table th, .summary-table td {
+            border: 1px solid #ddd;
+            padding: 12px;
+            text-align: left;
+        }
+        .summary-table th {
+            background-color: #f2f2f2;
+        }
+        .summary-table tr:nth-child(even) {
+            background-color: #f9f9f9;
+        }
+        .summary-table .total {
+            font-weight: bold;
+            background-color: #e8f4fd;
+        }
+        h2 {
+            color: #d9534f;
+            margin-top: 30px;
+            padding-bottom: 5px;
+            border-bottom: 2px solid #f0f0f0;
+        }
+        .checklist {
+            list-style: none;
+            padding: 0;
+        }
+        .checklist li {
+            padding: 5px 0;
+        }
+        .checklist input {
+            margin-right: 10px;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <header>
+        <h1>Itinerario de Viaje: Berlín y Praga</h1>
+        <p>Un viaje familiar del 5 al 16 de agosto</p>
+    </header>
+
+    <section id="checklist">
+        <h2>✅ Tareas Pre-viaje</h2>
+        <ul class="checklist">
+            <li><label><input type="checkbox"> Comprar billetes de tren Berlín → Praga</label></li>
+            <li><label><input type="checkbox"> Reservar cúpula del Reichstag (gratis, pero obligatorio)</label></li>
+            <li><label><input type="checkbox"> Comprar CityTourCard para Berlín</label></li>
+            <li><label><input type="checkbox"> Comprar pases de transporte para Praga</label></li>
+            <li><label><input type="checkbox"> Confirmar reservas de hotel</label></li>
+        </ul>
+    </section>
+
+    <section id="berlin-1">
+        <h2>📍 Berlín (Parte 1)</h2>
+        <button class="accordion-button"><span class="day-number">Día 1</span> 5 de agosto – Llegada a Berlín</button>
+        <div class="panel">
+            <ul>
+                <li><span class="icon">✈️</span> <b>11:50:</b> Llegada al <a href="https://maps.google.com/?q=Berlin+Brandenburg+Airport+(BER)" target="_blank">aeropuerto de Berlín Brandenburg (BER)</a>.</li>
+                <li><span class="icon">🏨</span> <b>13:00:</b> Traslado y check-in en <a href="https://maps.google.com/?q=Numa+Berlin+Torstrasse" target="_blank">Numa Berlin Torstrasse</a>.
+                    <br><span class="icon">🚇</span> Transporte: Tren FEX y tranvía M8 (30–40 min).
+                    <br><span class="icon">💰</span> Precio: €3,80 por adulto (zona ABC).</li>
+                <li><span class="icon">🚶</span> <b>14:30:</b> Paseo por <a href="https://maps.google.com/?q=Hackescher+Markt" target="_blank">Hackescher Markt</a> e <a href="https://maps.google.com/?q=Museum+Island,+Berlin" target="_blank">Isla de los Museos</a> (exterior).</li>
+                <li><span class="icon">☕</span> <b>17:00:</b> Merienda en <a href="https://maps.google.com/?q=Café+Einstein+Unter+den+Linden" target="_blank">Café Einstein Unter den Linden</a>.</li>
+                <li><span class="icon">🍽️</span> <b>18:30:</b> Cena en <a href="https://maps.google.com/?q=House+of+Small+Wonder,+Berlin" target="_blank">House of Small Wonder</a>. (Precio estimado: €55).</li>
+            </ul>
+        </div>
+
+        <button class="accordion-button"><span class="day-number">Día 2</span> 6 de agosto – Lo esencial de Berlín</button>
+        <div class="panel">
+            <ul>
+                <li><span class="icon">🎨</span> Visita a <a href="https://maps.google.com/?q=East+Side+Gallery" target="_blank">East Side Gallery</a> y The Wall Museum.
+                    <br><span class="icon">💰</span> Precio museo: €9,99/adulto, niños <7 gratis.</li>
+                <li><span class="icon">🏛️</span> Recorrido: <a href="https://maps.google.com/?q=Brandenburg+Gate" target="_blank">Puerta de Brandeburgo</a>, <a href="https://maps.google.com/?q=Memorial+to+the+Murdered+Jews+of+Europe" target="_blank">Memorial del Holocausto</a> y <a href="https://maps.google.com/?q=Reichstag+Building" target="_blank">Reichstag</a>.
+                    <br><span class="icon">💰</span> Gratis, ¡recuerda reservar la cúpula!</li>
+                <li><span class="icon">🍽️</span> Cena familiar: <a href="https://maps.google.com/?q=Peter+Pane+Berlin" target="_blank">Peter Pane</a> o <a href="https://maps.google.com/?q=Vapiano+Berlin" target="_blank">Vapiano</a> (Precio estimado: €60).</li>
+            </ul>
+        </div>
+        
+        <button class="accordion-button"><span class="day-number">Día 3</span> 7 de agosto – Zoológico y ciencia</button>
+        <div class="panel">
+             <ul>
+                <li><span class="icon">🦁</span> <b>Mañana:</b> <a href="https://maps.google.com/?q=Berlin+Zoo" target="_blank">Berlin Zoo</a>.
+                    <br><span class="icon">💰</span> Precio: €24/adulto, €12/niño. Acuario opcional.</li>
+                <li><span class="icon">🌳</span> <b>Almuerzo:</b> Picnic en <a href="https://maps.google.com/?q=Tiergarten,+Berlin" target="_blank">Tiergarten</a>.</li>
+                <li><span class="icon">🔬</span> <b>Tarde:</b> <a href="https://maps.google.com/?q=Natural+History+Museum,+Berlin" target="_blank">Museo de Ciencias Naturales</a>.
+                    <br><span class="icon">💰</span> Precio: €11/adulto, €5/niño.</li>
+                <li><span class="icon">🍽️</span> <b>Cena:</b> <a href="https://maps.google.com/?q=NENI+Berlin" target="_blank">NENI Berlin</a> (Precio estimado: €85).</li>
+            </ul>
+        </div>
+
+        <button class="accordion-button"><span class="day-number">Día 4</span> 8 de agosto – Excursión a Potsdam</button>
+        <div class="panel">
+            <ul>
+                <li><span class="icon">👑</span> Visita al <a href="https://maps.google.com/?q=Sanssouci+Palace,+Potsdam" target="_blank">Palacio de Sanssouci</a> y sus jardines.
+                    <br><span class="icon">💰</span> Precio palacio: €12/adulto, €8/niño.</li>
+                <li><span class="icon">🚶</span> Paseo por el <a href="https://maps.google.com/?q=Dutch+Quarter,+Potsdam" target="_blank">Barrio Holandés</a> (gratis).</li>
+                <li><span class="icon">🍽️</span> Cena en Potsdam (Precio estimado: €60).</li>
+            </ul>
+        </div>
+
+        <button class="accordion-button"><span class="day-number">Día 5</span> 9 de agosto – Isla de los Museos y paseo en barco</button>
+        <div class="panel">
+            <ul>
+                <li><span class="icon">🏛️</span> <b>Mañana:</b> <a href="https://maps.google.com/?q=Museum+Island,+Berlin" target="_blank">Isla de los Museos</a>.
+                    <br><span class="icon">💰</span> Ticket combinado: €24/adulto, niños <18 gratis.</li>
+                <li><span class="icon">🚢</span> <b>Tarde:</b> Paseo en barco por el río Spree desde <a href="https://maps.google.com/?q=Nikolaiviertel,+Berlin" target="_blank">Nikolaiviertel</a>.
+                    <br><span class="icon">💰</span> Precio: €18/persona.</li>
+                <li><span class="icon">🍽️</span> <b>Cena:</b> <a href="https://maps.google.com/?q=Zur+letzten+Instanz,+Berlin" target="_blank">Zur letzten Instanz</a> (Precio estimado: €70).</li>
+            </ul>
+        </div>
+    </section>
+
+    <section id="prague">
+        <h2>📍 Praga</h2>
+        <button class="accordion-button"><span class="day-number">Día 6</span> 10 de agosto – Viaje a Praga</button>
+        <div class="panel">
+            <ul>
+                <li><span class="icon">🚄</span> <b>09:00:</b> Tren de Berlín a Praga (4,5 h).</li>
+                <li><span class="icon">🏨</span> <b>13:30:</b> Check-in en <a href="https://maps.google.com/?q=Vincanto+Rooms+Old+Town+Prague" target="_blank">Vincanto Rooms Old Town</a>.</li>
+                <li><span class="icon">🚶</span> <b>Tarde:</b> Paseo por <a href="https://maps.google.com/?q=Charles+Bridge,+Prague" target="_blank">Puente de Carlos</a>, <a href="https://maps.google.com/?q=Old+Town+Square,+Prague" target="_blank">Plaza Vieja</a> y <a href="https://maps.google.com/?q=Astronomical+Clock,+Prague" target="_blank">Reloj Astronómico</a>.</li>
+                <li><span class="icon">🍽️</span> <b>Cena:</b> <a href="https://maps.google.com/?q=Lokál+Dlouhááá,+Prague" target="_blank">Lokál Dlouhááá</a> (Precio estimado: €70).</li>
+            </ul>
+        </div>
+
+        <button class="accordion-button"><span class="day-number">Día 7</span> 11 de agosto – Castillo de Praga</button>
+        <div class="panel">
+            <ul>
+                <li><span class="icon">🏰</span> <b>Mañana:</b> Visita al <a href="https://maps.google.com/?q=Prague+Castle" target="_blank">Castillo de Praga</a>.
+                    <br><span class="icon">💰</span> Circuito B familiar: 950 CZK (~€36).</li>
+                <li><span class="icon">🌳</span> <b>Tarde:</b> Paseo por <a href="https://maps.google.com/?q=Malá+Strana,+Prague" target="_blank">Malá Strana</a> y subida a la <a href="https://maps.google.com/?q=Petřín+Hill,+Prague" target="_blank">Colina Petřín</a>.</li>
+                <li><span class="icon">🍽️</span> <b>Cena:</b> <a href="https://maps.google.com/?q=Café+Savoy,+Prague" target="_blank">Café Savoy</a> (Precio estimado: €36).</li>
+            </ul>
+        </div>
+
+        <button class="accordion-button"><span class="day-number">Día 8</span> 12 de agosto – Exploración tranquila en Praga</button>
+        <div class="panel">
+             <ul>
+                <li><span class="icon">🧸</span> <b>Opcional:</b> <a href="https://maps.google.com/?q=Prague+Toy+Museum" target="_blank">Museo del Juguete</a> o <a href="https://maps.google.com/?q=Museum+Kampa,+Prague" target="_blank">Museo Kampa</a>.</li>
+                <li><span class="icon">🏞️</span> <b>Paseo:</b> <a href="https://maps.google.com/?q=Letná+Park,+Prague" target="_blank">Parque Letná</a>.</li>
+                <li><span class="icon">☕</span> <b>Merienda:</b> <a href="https://maps.google.com/?q=Choco+Café,+Prague" target="_blank">Choco Café</a>.</li>
+                <li><span class="icon">🍽️</span> <b>Cena:</b> <a href="https://maps.google.com/?q=Pivovarsky+Dum,+Prague" target="_blank">Pivovarsky Dum</a> (Precio estimado: €29).</li>
+            </ul>
+        </div>
+    </section>
+
+    <section id="berlin-2">
+        <h2>📍 Berlín (Parte 2)</h2>
+        <button class="accordion-button"><span class="day-number">Día 9</span> 13 de agosto – Vuelta a Berlín</button>
+        <div class="panel">
+            <ul>
+                <li><span class="icon">🚄</span> <b>09:00:</b> Tren de Praga a Berlín (4,5 h).</li>
+                <li><span class="icon">🏨</span> <b>Tarde:</b> Check-in en <a href="https://maps.google.com/?q=Premier+Inn+Berlin+Alexanderplatz" target="_blank">Premier Inn Berlin Alexanderplatz</a>.</li>
+                <li><span class="icon">🧱</span> <b>Actividad:</b> <a href="https://maps.google.com/?q=LEGOLAND+Discovery+Centre+Berlin" target="_blank">LEGOLAND Discovery Centre</a>.
+                    <br><span class="icon">💰</span> Precio: €19,50/persona.</li>
+                <li><span class="icon">🍽️</span> <b>Cena:</b> Cerca de Alexanderplatz (Precio estimado: €45).</li>
+            </ul>
+        </div>
+
+        <button class="accordion-button"><span class="day-number">Día 10</span> 14 de agosto – Excursión a Oranienburg</button>
+        <div class="panel">
+            <ul>
+                <li><span class="icon">memorial</span> <b>Excursión:</b> <a href="https://maps.google.com/?q=Sachsenhausen+Memorial+and+Museum" target="_blank">Memorial y museo Sachsenhausen</a>.
+                    <br><span class="icon">💰</span> Entrada: €5/adulto. Tour opcional.</li>
+                <li><span class="icon">🍽️</span> <b>Cena:</b> En Berlín u Oranienburg (Precio estimado: €50).</li>
+            </ul>
+        </div>
+
+        <button class="accordion-button"><span class="day-number">Día 11</span> 15 de agosto – Día libre / Opción Werder</button>
+        <div class="panel">
+            <ul>
+                <li><span class="icon">🏞️</span> <b>Día libre en Berlín</b> o excursión opcional a <a href="https://maps.google.com/?q=Werder+(Havel)" target="_blank">Werder (Havel)</a>.</li>
+                <li><span class="icon">🍽️</span> <b>Cena:</b> Cena de despedida en Berlín (Precio estimado: €50).</li>
+            </ul>
+        </div>
+
+        <button class="accordion-button"><span class="day-number">Día 12</span> 16 de agosto – Regreso</button>
+        <div class="panel">
+            <ul>
+                <li><span class="icon">🛍️</span> Mañana libre para compras o último paseo.</li>
+                <li><span class="icon">✈️</span> <b>14:00:</b> Check-out y traslado al aeropuerto BER para el vuelo de las 17:00.</li>
+            </ul>
+        </div>
+    </section>
+    
+    <section id="budget">
+        <h2>📊 Resumen de Gastos Estimados</h2>
+        <table class="summary-table">
+            <thead>
+                <tr>
+                    <th>Concepto</th>
+                    <th>Precio Aproximado</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Transporte urbano (Berlín, incl. excursiones)</td>
+                    <td>€120</td>
+                </tr>
+                <tr>
+                    <td>Transporte urbano (Praga)</td>
+                    <td>€26</td>
+                </tr>
+                <tr>
+                    <td>Museos / Actividades varias</td>
+                    <td>€150</td>
+                </tr>
+                 <tr>
+                    <td>Entradas especiales (zoo, barco, castillo, etc.)</td>
+                    <td>€250</td>
+                </tr>
+                <tr>
+                    <td>Restaurantes (estimado)</td>
+                    <td>€735 – €870</td>
+                </tr>
+                <tr class="total">
+                    <td>Total Aproximado</td>
+                    <td>€1.480 – €1.600</td>
+                </tr>
+            </tbody>
+        </table>
+    </section>
+
+</div>
+
+<script>
+    var acc = document.getElementsByClassName("accordion-button");
+    var i;
+
+    for (i = 0; i < acc.length; i++) {
+        acc[i].addEventListener("click", function() {
+            /* Toggle between adding and removing the "active" class,
+            to highlight the button that controls the panel */
+            this.classList.toggle("active");
+
+            /* Toggle between hiding and showing the active panel */
+            var panel = this.nextElementSibling;
+            if (panel.style.maxHeight) {
+                panel.style.maxHeight = null;
+            } else {
+                panel.style.maxHeight = panel.scrollHeight + "px";
+            }
+        });
+    }
+</script>
+
+</body>
+</html>
