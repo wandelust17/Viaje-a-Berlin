@@ -1,0 +1,496 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Itinerario Interactivo: Berlín y Praga</title>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 20px;
+            background-color: #f4f7f6;
+            color: #333;
+        }
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            background: #fff;
+            padding: 25px;
+            border-radius: 10px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        }
+        header {
+            text-align: center;
+            border-bottom: 2px solid #e0e0e0;
+            padding-bottom: 20px;
+            margin-bottom: 20px;
+        }
+        header h1 {
+            color: #003366;
+            margin: 0;
+        }
+        header p {
+            margin: 5px 0 0;
+            color: #555;
+            font-size: 1.1em;
+        }
+        .accordion-button {
+            background-color: #005A9C;
+            color: white;
+            cursor: pointer;
+            padding: 18px;
+            width: 100%;
+            border: none;
+            text-align: left;
+            outline: none;
+            font-size: 1.1em;
+            font-weight: bold;
+            transition: background-color 0.3s ease;
+            margin-top: 10px;
+            border-radius: 5px;
+        }
+        .accordion-button:hover, .accordion-button.active {
+            background-color: #003366;
+        }
+        .accordion-button .day-number {
+            display: inline-block;
+            background: rgba(255,255,255,0.2);
+            padding: 4px 10px;
+            border-radius: 5px;
+            margin-right: 15px;
+        }
+        .panel {
+            padding: 0 18px;
+            background-color: white;
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease-out;
+            border: 1px solid #ddd;
+            border-top: none;
+            border-radius: 0 0 5px 5px;
+        }
+        .panel ul {
+            list-style: none;
+            padding: 0;
+            margin: 15px 0;
+        }
+        .panel li {
+            padding: 12px 0;
+            border-bottom: 1px dashed #eee;
+        }
+        .panel li:last-child {
+            border-bottom: none;
+        }
+        .panel a, details summary {
+            color: #005A9C;
+            text-decoration: none;
+            font-weight: bold;
+            cursor: pointer;
+        }
+        .panel a:hover, details summary:hover {
+            text-decoration: underline;
+        }
+        .icon {
+            margin-right: 8px;
+        }
+        details {
+            margin-top: 10px;
+        }
+        details ul {
+            margin-left: 20px;
+            margin-top: 5px;
+        }
+        details li {
+            padding: 8px 0;
+        }
+        .summary-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+        .summary-table th, .summary-table td {
+            border: 1px solid #ddd;
+            padding: 12px;
+            text-align: left;
+        }
+        .summary-table th {
+            background-color: #f2f2f2;
+        }
+        .summary-table tr:nth-child(even) {
+            background-color: #f9f9f9;
+        }
+        .summary-table .total {
+            font-weight: bold;
+            background-color: #e8f4fd;
+        }
+        h2 {
+            color: #d9534f;
+            margin-top: 30px;
+            padding-bottom: 5px;
+            border-bottom: 2px solid #f0f0f0;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <header>
+        <h1>Itinerario de Viaje: Berlín y Praga</h1>
+        <p>Un viaje familiar del 5 al 16 de agosto</p>
+    </header>
+
+    <section id="berlin-1">
+        <h2>📍 Berlín (Parte 1)</h2>
+        <button class="accordion-button"><span class="day-number">Día 1</span> 5 de agosto – Llegada a Berlín</button>
+        <div class="panel">
+            <ul>
+                <li><span class="icon">✈️</span> <b>11:50:</b> Llegada al <a href="https://maps.google.com/?q=Berlin+Brandenburg+Airport+(BER)" target="_blank">aeropuerto de Berlín Brandenburg (BER)</a>.</li>
+                <li><span class="icon">🏨</span> <b>13:00:</b> Traslado y check-in en <a href="https://maps.google.com/?q=Numa+Berlin+Torstrasse" target="_blank">Numa Berlin Torstrasse</a>.
+                    <br><span class="icon">🚇</span> Transporte: Tren FEX y tranvía M8 (30–40 min).
+                    <br><span class="icon">💰</span> Precio: €3,80 por adulto (zona ABC).</li>
+                <li><span class="icon">🚶</span> <b>14:30:</b> Paseo por <a href="https://maps.google.com/?q=Hackescher+Markt" target="_blank">Hackescher Markt</a> e <a href="https://maps.google.com/?q=Museum+Island,+Berlin" target="_blank">Isla de los Museos</a> (exterior).</li>
+                <li><span class="icon">☕</span> <b>17:00:</b> Merienda en <a href="https://maps.google.com/?q=Café+Einstein+Unter+den+Linden" target="_blank">Café Einstein Unter den Linden</a>.</li>
+                <li><span class="icon">🍽️</span> <b>Cena (Estimado ~€50):</b>
+                    <details>
+                        <summary>Opciones económicas recomendadas</summary>
+                        <ul>
+                            <li><a href="https://maps.google.com/?q=Mustafa's+Gemüse+Kebap,+Berlin" target="_blank">Mustafa's Gemüse Kebap</a> (famoso street food)</li>
+                            <li><a href="https://maps.google.com/?q=Witty's+Currywurst,+Berlin" target="_blank">Witty's</a> (currywurst ecológico)</li>
+                            <li><a href="https://maps.google.com/?q=1980+Vegan+Living,+Berlin" target="_blank">1980 Vegan Living</a> (viet-vegan)</li>
+                            <li><a href="https://maps.google.com/?q=Tommi's+Burger+Joint,+Berlin" target="_blank">Tommi's Burger Joint</a> (hamburguesas)</li>
+                        </ul>
+                    </details>
+                </li>
+            </ul>
+        </div>
+
+        <button class="accordion-button"><span class="day-number">Día 2</span> 6 de agosto – Lo esencial de Berlín</button>
+        <div class="panel">
+            <ul>
+                <li><span class="icon">🎨</span> Visita a <a href="https://maps.google.com/?q=East+Side+Gallery" target="_blank">East Side Gallery</a> (gratis) y The Wall Museum.
+                    <br><span class="icon">💰</span> Precio museo: €9,99/adulto, niños <7 gratis.</li>
+                <li><span class="icon">🏛️</span> Recorrido: <a href="https://maps.google.com/?q=Brandenburg+Gate" target="_blank">Puerta de Brandeburgo</a>, <a href="https://maps.google.com/?q=Memorial+to+the+Murdered+Jews+of+Europe" target="_blank">Memorial del Holocausto</a> y <a href="https://maps.google.com/?q=Reichstag+Building" target="_blank">Reichstag</a>.
+                    <br><span class="icon">💰</span> Gratis, ¡recuerda reservar la cúpula!</li>
+                <li><span class="icon">🍽️</span> <b>Cena (Estimado ~€50):</b>
+                     <details>
+                        <summary>Opciones económicas recomendadas</summary>
+                        <ul>
+                            <li><a href="https://maps.google.com/?q=Mustafa's+Gemüse+Kebap,+Berlin" target="_blank">Mustafa's Gemüse Kebap</a></li>
+                            <li><a href="https://maps.google.com/?q=Witty's+Currywurst,+Berlin" target="_blank">Witty's</a></li>
+                            <li><a href="https://maps.google.com/?q=1980+Vegan+Living,+Berlin" target="_blank">1980 Vegan Living</a></li>
+                            <li><a href="https://maps.google.com/?q=Tommi's+Burger+Joint,+Berlin" target="_blank">Tommi's Burger Joint</a></li>
+                        </ul>
+                    </details>
+                </li>
+            </ul>
+        </div>
+        
+        <button class="accordion-button"><span class="day-number">Día 3</span> 7 de agosto – Zoológico y ciencia</button>
+        <div class="panel">
+             <ul>
+                <li><span class="icon">🦁</span> <b>Mañana:</b> <a href="https://maps.google.com/?q=Berlin+Zoo" target="_blank">Berlin Zoo</a>.
+                    <br><span class="icon">💰</span> Precio: €24://maps.google.com/?q=Berlin+Brandenburg+Airport+(BER)" target="_blank">aeropuerto de Berlín Brandenburg (BER)</a>.</li>
+                <li><span class="icon">🏨</span> <b>13:00:</b> Traslado y check-in en <a href="https://maps.google.com/?q=Numa+Berlin+Torstrasse" target="_blank">Numa Berlin Torstrasse</a>.
+                    <br><span class="icon">🚇</span> Transporte: Tren FEX y tranvía M8 (30–40 min).
+                    <br><span class="icon">💰</span> Precio: €3,80 por adulto (zona ABC).</li>
+                <li><span class="icon">🚶</span> <b>14:30:</b> Paseo por <a href="https://maps.google.com/?q=Hackescher+Markt" target="_blank">Hackescher Markt</a> e <a href="https://maps.google.com/?q=Museum+Island,+Berlin" target="_blank">Isla de los Museos</a> (exterior).</li>
+                <li><span class="icon">☕</span> <b>17:00:</b> Merienda en <a href="https://maps.google.com/?q=Café+Einstein+Unter+den+Linden" target="_blank">Café Einstein Unter den Linden</a>.</li>
+                <li><span class="icon">🍽️</span> <b>18:30:</b> Cena (Estimado ~€50 familia).
+                    <div class="dinner-options">
+                        <p>Opciones recomendadas:</p>
+                        <a href="https://maps.google.com/?q=Mustafa's+Gemüse+Kebap,+Berlin" target="_blank">Mustafa's Gemüse Kebap</a> | 
+                        <a href="https://maps.google.com/?q=Witty's+Currywurst+Berlin" target="_blank">Witty's</a> |
+                        <a href="https://maps.google.com/?q=1980+Vegan+Living,+Berlin" target="_blank">1980 Vegan Living</a> |
+                        <a href="https://maps.google.com/?q=Tommi's+Burger+Joint,+Berlin" target="_blank">Tommi's Burger Joint</a>
+                    </div>
+                </li>
+            </ul>
+        </div>
+
+        <button class="accordion-button"><span class="day-number">Día 2</span> 6 de agosto – Lo esencial de Berlín</button>
+        <div class="panel">
+            <ul>
+                <li><span class="icon">🎨</span> Visita a <a href="https://maps.google.com/?q=East+Side+Gallery" target="_blank">East Side Gallery</a> (gratis) y The Wall Museum.
+                    <br><span class="icon">💰</span> Precio museo: €9,99/adulto, niños <7 gratis.</li>
+                <li><span class="icon">🏛️</span> Recorrido: <a href="https://maps.google.com/?q=Brandenburg+Gate" target="_blank">Puerta de Brandeburgo</a>, <a href="https://maps.google.com/?q=Memorial+to+the+Murdered+Jews+of+Europe" target="_blank">Memorial del Holocausto</a> y <a href="https://maps.google.com/?q=Reichstag+Building" target="_blank">Reichstag</a>.
+                    <br><span class="icon">💰</span> Gratis, ¡recuerda reservar la cúpula!</li>
+                <li><span class="icon">🍽️</span> Cena (Estimado ~€50 familia).
+                     <div class="dinner-options">
+                        <p>Opciones recomendadas:</p>
+                        <a href="https://maps.google.com/?q=Mustafa's+Gemüse+Kebap,+Berlin" target="_blank">Mustafa's Gemüse Kebap</a> | 
+                        <a href="https://maps.google.com/?q=Witty's+Currywurst+Berlin" target="_blank">Witty's</a> |
+                        <a href="https://maps.google.com/?q=1980+Vegan+Living,+Berlin" target="_blank">1980 Vegan Living</a> |
+                        <a href="https://maps.google.com/?q=Tommi's+Burger+Joint,+Berlin" target="_blank">Tommi's Burger Joint</a>
+                    </div>
+                </li>
+            </ul>
+        </div>
+        
+        <button class="accordion-button"><span class="day-number">Día 3</span> 7 de agosto – Zoológico y ciencia</button>
+        <div class="panel">
+             <ul>
+                <li><span class="icon">🦁</span> <b>Mañana:</b> <a href="https://maps.google.com/?q=Berlin+Zoo" target="_blank">Berlin Zoo</a>.
+                    <br><span class="icon">💰</span> Precio: €24/adulto, €12/niño. Acuario opcional: €17/adulto, €9/niño.</li>
+                <li><span class="icon">🌳</span> <b>Almuerzo:</b> Picnic en <a href="https://maps.google.com/?q=Tiergarten,+Berlin" target="_blank">Tiergarten</a>.</li>
+                <li><span class="icon">🔬</span> <b>Tarde:</b> <a href="https://maps.google.com/?q=Natural+History+Museum,+Berlin" target="_blank">Museo de Ciencias Naturales</a>.
+                    <br><span class="icon">💰</span> Precio: €11/adulto, €5/niño.</li>
+                <li><span class="icon">🍽️</span> Cena (Estimado ~€50 familia).
+                     <div class="dinner-options">
+                        <p>Opciones recomendadas:</p>
+                        <a href="https://maps.google.com/?q=Mustafa's+Gemüse+Kebap,+Berlin" target="_blank">Mustafa's Gemüse Kebap</a> | 
+                        <a href="https://maps.google.com/?q=Witty's+Currywurst+Berlin" target="_blank">Witty's</a> |
+                        <a href="https://maps.google.com/?q=1980+Vegan+Living,+Berlin" target="_blank">1980 Vegan Living</a> |
+                        <a href="https://maps.google.com/?q=Tommi's+Burger+Joint,+Berlin" target="_blank">Tommi's Burger Joint</a>
+                    </div>
+                </li>
+            </ul>
+        </div>
+
+        <button class="accordion-button"><span class="day-number">Día 4</span> 8 de agosto – Charlottenburg y relax</button>
+        <div class="panel">
+            <ul>
+                <li><span class="icon">👑</span> Visita al <a href="https://maps.google.com/?q=Charlottenburg+Palace" target="_blank">Palacio de Charlottenburg</a>.
+                    <br><span class="icon">💰</span> Precio: €12/adulto, €8/niño.</li>
+                <li><span class="icon">🛍️</span> Paseo por <a href="https://maps.google.com/?q=Kurfürstendamm,+Berlin" target="_blank">Kurfürstendamm</a> y visita a <a href="https://maps.google.com/?q=KaDeWe,+Berlin" target="_blank">KaDeWe</a>.</li>
+                <li><span class="icon">🍽️</span> Cena (Estimado ~€50 familia).
+                     <div class="dinner-options">
+                        <p>Opciones recomendadas:</p>
+                        <a href="https://maps.google.com/?q=Mustafa's+Gemüse+Kebap,+Berlin" target="_blank">Mustafa's Gemüse Kebap</a> | 
+                        <a href="https://maps.google.com/?q=Witty's+Currywurst+Berlin" target="_blank">Witty's</a> |
+                        <a href="https://maps.google.com/?q=1980+Vegan+Living,+Berlin" target="_blank">1980 Vegan Living</a> |
+                        <a href="https://maps.google.com/?q=Tommi's+Burger+Joint,+Berlin" target="_blank">Tommi's Burger Joint</a>
+                    </div>
+                </li>
+            </ul>
+        </div>
+
+        <button class="accordion-button"><span class="day-number">Día 5</span> 9 de agosto – Isla de los Museos y barco</button>
+        <div class="panel">
+            <ul>
+                <li><span class="icon">🏛️</span> <b>Mañana:</b> <a href="https://maps.google.com/?q=Museum+Island,+Berlin" target="_blank">Isla de los Museos</a>.
+                    <br><span class="icon">💰</span> Ticket: €24/adulto, niños <18 gratis (incluye Panorama Pérgamo).</li>
+                <li><span class="icon">🚢</span> <b>Tarde:</b> Paseo en barco por el río Spree desde <a href="https://maps.google.com/?q=Nikolaiviertel,+Berlin" target="_blank">Nikolaiviertel</a>.
+                    <br><span class="icon">💰</span> Precio: €18/persona.</li>
+                <li><span class="icon">🍽️</span> Cena (Estimado ~€50 familia).
+                     <div class="dinner-options">
+                        <p>Opciones recomendadas:</p>
+                        <a href="https://maps.google.com/?q=Mustafa's+Gemüse+Kebap,+Berlin" target="_blank">Mustafa's Gemüse Kebap</a> | 
+                        <a href="https://maps.google.com/?q=Witty's+Currywurst+Berlin" target="_blank">Witty's</a> |
+                        <a href="https://maps.google.com/?q=1980+Vegan+Living,+Berlin" target="_blank">1980 Vegan Living</a> |
+                        <a href="https://maps.google.com/?q=Tommi's+Burger+Joint,+Berlin" target="_blank">Tommi's Burger Joint</a>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </section>
+
+    <section id="prague">
+        <h2>📍 Praga</h2>
+        <button class="accordion-button"><span class="day-number">Día 6</span> 10 de agosto – Viaje a Praga</button>
+        <div class="panel">
+            <ul>
+                <li><span class="icon">🚄</span> <b>09:00:</b> Tren de Berlín a Praga (4,5 h).</li>
+                <li><span class="icon">🏨</span> <b>13:30:</b> Check-in en <a href="https://maps.google.com/?q=Vincanto+Rooms+Old+Town+Prague" target="_blank">Vincanto Rooms Old Town</a>.</li>
+                <li><span class="icon">🚶</span> <b>Tarde:</b> Paseo por <a href="https://maps.google.com/?q=Charles+Bridge,+Prague" target="_blank">Puente de Carlos</a>, <a href="https://maps.google.com/?q=Old+Town+Square,+Prague" target="_blank">Plaza Vieja</a> y <a href="https://maps.google.com/?q=Astronomical+Clock,+Prague" target="_blank">Reloj Astronómico</a>.</li>
+                <li><span class="icon">🍽️</span> Cena (Estimado ~€50 familia).
+                    <div class="dinner-options">
+                        <p>Opciones recomendadas:</p>
+                        <a href="https://maps.google.com/?q=Lokál+Dlouhááá,+Prague" target="_blank">Lokál Dlouhááá</a> |
+                        <a href="https://maps.google.com/?q=Maitrea+Prague" target="_blank">Maitrea (vegetariano)</a> |
+                        <a href="https://maps.google.com/?q=Sad+Man’s+Tongue+Bistro,+Prague" target="_blank">Sad Man’s Tongue</a>
+                    </div>
+                </li>
+            </ul>
+        </div>
+
+        <button class="accordion-button"><span class="day-number">Día 7</span> 11 de agosto – Castillo de Praga</button>
+        <div class="panel">
+            <ul>
+                <li><span class="icon">🏰</span> <b>Mañana:</b> Visita al <a href="https://maps.google.com/?q=Prague+Castle" target="_blank">Castillo de Praga</a>.
+                    <br><span class="icon">💰</span> Circuito B familiar: 950 CZK (~€36).</li>
+                <li><span class="icon">🌳</span> <b>Tarde:</b> Paseo por <a href="https://maps.google.com/?q=Malá+Strana,+Prague" target="_blank">Malá Strana</a> y subida a la <a href="https://maps.google.com/?q=Petřín+Hill,+Prague" target="_blank">Colina Petřín</a> (funicular incluido en pase).</li>
+                <li><span class="icon">🍽️</span> Cena (Estimado ~€50 familia).
+                    <div class="dinner-options">
+                        <p>Opciones recomendadas:</p>
+                        <a href="https://maps.google.com/?q=Kuchyň,+Prague" target="_blank">Kuchyň</a> |
+                        <a href="https://maps.google.com/?q=Vegan's+Prague" target="_blank">Vegan's Prague</a> |
+                        <a href="https://maps.google.com/?q=U+Magistra+Kelly,+Prague" target="_blank">U Magistra Kelly</a>
+                    </div>
+                </li>
+            </ul>
+        </div>
+
+        <button class="accordion-button"><span class="day-number">Día 8</span> 12 de agosto – Exploración tranquila</button>
+        <div class="panel">
+             <ul>
+                <li><span class="icon">🧸</span> <b>Opcional:</b> Museo del Juguete o <a href="https://maps.google.com/?q=Museum+Kampa,+Prague" target="_blank">Museo Kampa</a> (€10/adulto aprox).</li>
+                <li><span class="icon">🏞️</span> <b>Paseo:</b> <a href="https://maps.google.com/?q=Letná+Park,+Prague" target="_blank">Parque Letná</a> y visita al centro comercial <a href="https://maps.google.com/?q=Palladium,+Prague" target="_blank">Palladium</a>.</li>
+                <li><span class="icon">☕</span> <b>Merienda:</b> <a href="https://maps.google.com/?q=Choco+Café,+Prague" target="_blank">Choco Café</a>.</li>
+                <li><span class="icon">🍽️</span> Cena (Estimado ~€50 familia).
+                    <div class="dinner-options">
+                        <p>Opciones recomendadas:</p>
+                        <a href="https://maps.google.com/?q=Lokál+Dlouhááá,+Prague" target="_blank">Lokál Dlouhááá</a> |
+                        <a href="https://maps.google.com/?q=Maitrea+Prague" target="_blank">Maitrea (vegetariano)</a> |
+                        <a href="https://maps.google.com/?q=Sad+Man’s+Tongue+Bistro,+Prague" target="_blank">Sad Man’s Tongue</a>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </section>
+
+    <section id="berlin-2">
+        <h2>📍 Berlín (Parte 2)</h2>
+        <button class="accordion-button"><span class="day-number">Día 9</span> 13 de agosto – Vuelta a Berlín</button>
+        <div class="panel">
+            <ul>
+                <li><span class="icon">🚄</span> <b>09:00:</b> Tren de Praga a Berlín (4,5 h).</li>
+                <li><span class="icon">🏨</span> <b>Tarde:</b> Check-in en <a href="https://maps.google.com/?q=Premier+Inn+Berlin+Alexanderplatz" target="_blank">Premier Inn Berlin Alexanderplatz</a>.</li>
+                <li><span class="icon">🧱</span> <b>Actividad:</b> <a href="https://maps.google.com/?q=LEGOLAND+Discovery+Centre+Berlin" target="_blank">LEGOLAND Discovery Centre</a>.
+                    <br><span class="icon">💰</span> Precio: €19,50/persona.</li>
+                <li><span class="icon">🍽️</span> Cena (Estimado ~€50 familia).
+                     <div class="dinner-options">
+                        <p>Opciones recomendadas:</p>
+                        <a href="https://maps.google.com/?q=Mustafa's+Gemüse+Kebap,+Berlin" target="_blank">Mustafa's Gemüse Kebap</a> | 
+                        <a href="https://maps.google.com/?q=Witty's+Currywurst+Berlin" target="_blank">Witty's</a> |
+                        <a href="https://maps.google.com/?q=1980+Vegan+Living,+Berlin" target="_blank">1980 Vegan Living</a> |
+                        <a href="https://maps.google.com/?q=Tommi's+Burger+Joint,+Berlin" target="_blank">Tommi's Burger Joint</a>
+                    </div>
+                </li>
+            </ul>
+        </div>
+
+        <button class="accordion-button"><span class="day-number">Día 10</span> 14 de agosto – Bundestag y Potsdam</button>
+        <div class="panel">
+            <ul>
+                <li><span class="icon">🏛️</span> <b>12:15:</b> Visita al <a href="https://maps.google.com/?q=Bundestag" target="_blank">Parlamento Alemán (Bundestag)</a> - cúpula y terraza.
+                    <br><span class="icon">💰</span> Entrada gratuita, ¡reserva obligatoria!</li>
+                <li><span class="icon">👑</span> <b>15:00:</b> Excursión opcional a <a href="https://maps.google.com/?q=Potsdam" target="_blank">Potsdam</a>.
+                     <br><span class="icon">🚇</span> Tren regional (45 min, incluido en CityTourCard ABC). Paseo por parque Sanssouci y barrio holandés.</li>
+                <li><span class="icon">🍽️</span> Cena (Estimado ~€50 familia).
+                     <div class="dinner-options">
+                        <p>Opciones recomendadas:</p>
+                        <a href="https://maps.google.com/?q=Mustafa's+Gemüse+Kebap,+Berlin" target="_blank">Mustafa's Gemüse Kebap</a> | 
+                        <a href="https://maps.google.com/?q=Witty's+Currywurst+Berlin" target="_blank">Witty's</a> |
+                        <a href="https://maps.google.com/?q=1980+Vegan+Living,+Berlin" target="_blank">1980 Vegan Living</a> |
+                        <a href="https://maps.google.com/?q=Tommi's+Burger+Joint,+Berlin" target="_blank">Tommi's Burger Joint</a>
+                    </div>
+                </li>
+            </ul>
+        </div>
+
+        <button class="accordion-button"><span class="day-number">Día 11</span> 15 de agosto – Día libre en Berlín</button>
+        <div class="panel">
+            <ul>
+                <li><span class="icon">🧺</span> <b>Mañana:</b> Visita al Mercado en <a href="https://maps.google.com/?q=Maybachufer+market+Berlin" target="_blank">Maybachufer</a>. (Nota: el mercado grande es martes y viernes).</li>
+                <li><span class="icon">🖼️</span> <b>Opcional:</b> <a href="https://maps.google.com/?q=Illuseum+Berlin" target="_blank">Illuseum Berlin</a> (€14/adulto, €11/niño).</li>
+                <li><span class="icon">🌳</span> <b>Tarde:</b> Paseo por <a href="https://maps.google.com/?q=Volkspark+Friedrichshain" target="_blank">Volkspark Friedrichshain</a> y visita a la tienda de juegos <a href="https://maps.google.com/?q=Brettspielgeschäft+Spielwiese+Berlin" target="_blank">"Spielwiese"</a>.</li>
+                <li><span class="icon">🍽️</span> Cena (Estimado ~€50 familia).
+                     <div class="dinner-options">
+                        <p>Opciones recomendadas:</p>
+                        <a href="https://maps.google.com/?q=Mustafa's+Gemüse+Kebap,+Berlin" target="_blank">Mustafa's Gemüse Kebap</a> | 
+                        <a href="https://maps.google.com/?q=Witty's+Currywurst+Berlin" target="_blank">Witty's</a> |
+                        <a href="https://maps.google.com/?q=1980+Vegan+Living,+Berlin" target="_blank">1980 Vegan Living</a> |
+                        <a href="https://maps.google.com/?q=Tommi's+Burger+Joint,+Berlin" target="_blank">Tommi's Burger Joint</a>
+                    </div>
+                </li>
+            </ul>
+        </div>
+
+        <button class="accordion-button"><span class="day-number">Día 12</span> 16 de agosto – Regreso</button>
+        <div class="panel">
+            <ul>
+                <li><span class="icon">🛍️</span> Mañana libre para compras de última hora o un último paseo.</li>
+                <li><span class="icon">✈️</span> <b>14:00:</b> Check-out y traslado al aeropuerto BER para el vuelo de las 17:00.</li>
+            </ul>
+        </div>
+    </section>
+
+    <section id="extras">
+        <h2>🎲 Recomendaciones Adicionales</h2>
+        <button class="accordion-button extra">Juegos de Mesa y Centros Comerciales</button>
+        <div class="panel">
+            <ul>
+                <li><b>Juegos de Mesa en Berlín:</b>
+                    <br><a href="https://maps.google.com/?q=Brettspielgeschäft+Spielwiese+Berlin" target="_blank">"Spielwiese"</a>: Tienda icónica con zona de juego.
+                    <br><a href="https://maps.google.com/?q=Game+Science+Center+Berlin" target="_blank">Game Science Center</a>: Museo interactivo.
+                    <br><a href="https://maps.google.com/?q=Der+Spielzeugladen,+Berlin" target="_blank">Der Spielzeugladen</a>: Tienda especializada.
+                </li>
+                <li><b>Juegos de Mesa en Praga:</b>
+                    <br><a href="https://maps.google.com/?q=Svět+deskových+her,+Prague" target="_blank">Svět deskových her</a>: Gran variedad y zona de pruebas.
+                    <br><a href="https://maps.google.com/?q=HRAS+–+Deskové+hry,+Prague" target="_blank">HRAS – Deskové hry</a>: Tienda céntrica.
+                    <br><a href="https://maps.google.com/?q=Mindok+Club,+Prague" target="_blank">Mindok Club</a>: Centro lúdico.
+                </li>
+                 <li><b>Centros Comerciales en Berlín:</b>
+                    <br><a href="https://maps.google.com/?q=Mall+of+Berlin" target="_blank">Mall of Berlin</a>: Ideal para compras y ocio.
+                    <br><a href="https://maps.google.com/?q=Alexa+Berlin" target="_blank">Alexa Berlin</a>: Junto a Alexanderplatz.
+                    <br><a href="https://maps.google.com/?q=KaDeWe,+Berlin" target="_blank">KaDeWe</a>: Experiencia cultural y gastronómica.
+                </li>
+                 <li><b>Centros Comerciales en Praga:</b>
+                    <br><a href="https://maps.google.com/?q=Palladium,+Prague" target="_blank">Palladium</a>: Más de 170 tiendas céntricas.
+                    <br><a href="https://maps.google.com/?q=Nový+Smíchov,+Prague" target="_blank">Nový Smíchov</a>: Moderno, con cine y ocio infantil.
+                </li>
+            </ul>
+        </div>
+    </section>
+    
+    <section id="budget">
+        <h2>📊 Resumen de Gastos Estimados</h2>
+        <table class="summary-table">
+            <thead>
+                <tr>
+                    <th>Concepto</th>
+                    <th>Precio Aproximado</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Transporte urbano (Berlín)</td>
+                    <td>€94 (2 CityTourCard 5 días)</td>
+                </tr>
+                <tr>
+                    <td>Transporte urbano (Praga)</td>
+                    <td>€26 (2 pases 72h)</td>
+                </tr>
+                <tr>
+                    <td>Museos / Actividades varios</td>
+                    <td>€150</td>
+                </tr>
+                 <tr>
+                    <td>Entradas especiales (zoo, barco, castillo, etc.)</td>
+                    <td>€200</td>
+                </tr>
+                <tr>
+                    <td>Restaurantes (estimado real)</td>
+                    <td>€735 – €870</td>
+                </tr>
+                <tr class="total">
+                    <td>Total aproximado</td>
+                    <td>€1.300 – €1.450</td>
+                </tr>
+            </tbody>
+        </table>
+    </section>
+
+</div>
+
+<script>
+    var acc = document.getElementsByClassName("accordion-button");
+    var i;
+
+    for (i = 0; i < acc.length; i++) {
+        acc[i].addEventListener("click", function() {
+            this.classList.toggle("active");
+            var panel = this.nextElementSibling;
+            if (panel.style.maxHeight) {
+                panel.style.maxHeight = null;
+            } else {
+                panel.style.maxHeight = panel.scrollHeight + "px";
+            }
+        });
+    }
+</script>
+
+</body>
+</html>
